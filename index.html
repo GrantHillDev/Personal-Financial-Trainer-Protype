@@ -8,22 +8,29 @@
   </head>
 
     <main>
-      <section>
-        
+      <section><!--src stands for source attribute.--><!--could actually write the following line of code just as src="./images/PFTLB02.png" without the first avatar part.-->
+        <img id="avatar" src="./images/PFTLB02.png"/><!--when adding cutom made image files into your local directory, make sure they don;t contain any symobls in the name, or else html will not load the image properly.-->
         <center><h1 style = "font-size: 100px;">Personal Finance Trainer Prototype</h1></center><!--centers the header.--><!--makes font much bigger, since h1 is the largest predefined font size.--><!--changed title of project to finance from financial.... sounded like it had too many adjectives.-->
         <hr><!--this is known as a horizontal rule element, and it adds a line that stretches across or webpage. No end tag needed for this tag.-->
-        <img id="avatar" src="./images/COL1A00.png"/>
+        
           <h1>Dashboard</h1>
           <br><!--use this tag to make a break or line space. No end tag needed for this tag.-->
+          <h2>Fire Up the Google</h2>
           <a href = "https://google.com" target = _self title = "This takes you to Google."><!--to make a basic hyperlink, use the a tag, then the href pointer to list the site address, then target to determine where to display the linked site address (URL) [in this case, _self displays it at the bottom left corner of the page], and then title also to write in a description of where the link takes you.-->
           Google<!--this is exactly what the hyperlink will display as on the webpage.-->
           </a>
-          <div>
-            <h3>Another Sub Heading</h3>
-            <p>Lorem ipsum...</p>
-          </div>
+          <br>
+            <h3>Making another webpage</h3><!--because the page2.html document is loocated inside of the same directory as my main webpage, alall that's nneeded to o lcate it is just its file nname. Otherwise, if it's inside of o anotherddirectory,  you'll have to premept the file name with the name of the directory which it's located in, then followed by a /, then the file name.-->
+            <a href = "page2.html" target = _self title = "This takes you to page 2."><!--make sure that any href string or address contains no spacces, or else it will nt register as a hyperlink on the website.-->
+            Page 2<!--because the href has to both site the addrress of the next page and what itt'sc alledd; itmakes sense to just ennsure that the name of the html document inside ofyour direcotory matches the site address, so as tto not cause unnnecessary errors.-->
+            </a>
+          <br>
+            <h3>Making an email hyperlink</h3>
+            <a href = "mailto:grant.softwareenigeering@gmail.com" target = _self title = "This allows you to email me.">
+              Email
+            </a>
         </section>
-      </article>
+    
     </main>
 
     <body><!--this represents a section of what you want displayed on your webpage.-->
@@ -41,6 +48,12 @@
           </li>
         </ul>
       </nav>
+      <br>
+      <h4>phone call anyone?</h4>
+        <audio controls src = "sounds/CGV01.mp3"></audio><!--audio element; needs controls at minimum.--><!--nevermind, you can write this without the controls boolean attribute.-->
+      <h4>we're sorry</h4>
+        <audio controls autoplay muted loop src = "sounds/CGV02.mp3"></audio><!--muted audio element that starts playing as soon as the site is loaded and remains on repeat.-->
+       sorry, this site doesn't support html music formats.<!--refer back to the tutorial to see how to create back up audio files in case others don't work.-->
     </header>
 
     
@@ -58,7 +71,17 @@
       </nav>
 
       <div>
-        <p>Powered by Grantenstein</p>
+        <h1>A red orb</h1>
+          <br>
+        <img src = "images/BSP1A00.png" height = 400 alt = "This is a giant red orb." title = "red orb"/><!--scales the image equally between the x and y axis, since width is never mentioned.-->
+          <br>
+        <h1>Coludus!</h1>
+          <br>
+          <a href = "https://doomwiki.org/wiki/Entryway"><!--turn an image into a hyperlink.-->
+            <img src = "images/COL1A00.png" height = 280 width = 200 title = "Coludus"/>
+          </a>
+        <p>Powered by Grantenstein</p><!--accepted video formats are mp4, ogg, and WebM.-->
+          <video controls autoplay muted loop src = "videos/BAC012025CGF.mp4" width = 200></video><!--modify the height or width of the posted video file in the event it's playing, but you can't see anything. This one was too large, but when I shrunk it down, it worked.-->
         <p>&copy; A. Grant Hill 2026</p>
       </div>
     </footer>
