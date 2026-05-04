@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" /><!--html can be considered as the backbone of web development; it serves as the structure and content for all webpage design.-->
     <title>Final Project #01</title><!--it's good practice to title all html based documents as 'index.html' because when a connection is made to a website containing a URL without a specific file mentioned in it, a browser might default to such a file name as index.html, and this also serves as what's known as a landing page for your webpage.... the first page you come across when accessing a web address.-->
     <link rel="stylesheet" href="./index.css" /><!--by placing your cursor over any tag in an html document, it will tell you briefly what its definition is.-->
-  </head>
+  </head><!--html is defined as a markup language because it utilizes tags to define the structure and presentation of how content is presented on web pages. It has also been suggested that html is not considered to be a programming language because it does not posses any logic, nor can it execute any computations. It is declarative, meaning it describes what the content is, not how to process it.-->
 
     <main>
       <section><!--src stands for source attribute.--><!--could actually write the following line of code just as src="./images/PFTLB02.png" without the first avatar part.-->
@@ -60,7 +60,7 @@
 
     <footer>
       <nav>
-        <ul>
+        <ul><!--unordered list-->
           <li class= "d-inline">
             <a class= "nav-Link" href="/privacy">Privacy Policy</a>
           </li>
@@ -82,7 +82,71 @@
           </a>
         <p>Powered by Grantenstein</p><!--accepted video formats are mp4, ogg, and WebM.-->
           <video controls autoplay muted loop src = "videos/BAC012025CGF.mp4" width = 200></video><!--modify the height or width of the posted video file in the event it's playing, but you can't see anything. This one was too large, but when I shrunk it down, it worked.-->
-        <p>&copy; A. Grant Hill 2026</p>
+        <p>this is normal text.</p>
+        <p>this is <b>bold</b> text.</p>
+        <p>this is <i>italic</i> text.</p>
+        <p>this is <big>big</big> text.</p>
+        <p>this is <small>small</small> text.</p>
+        <p>this is <sub>subscript</sub> text.</p>
+        <p>this is <sup>superscript</sup> text.</p>
+        <p>this is <ins>inserted</ins> text.</p>
+        <p>this is <del>deleted</del> text.</p>
+        <p>this is <mark>marked</mark> text.</p>
+        <h3>unordered list</h3><!--lists-->
+        <ul>
+          <li>first item</li>
+          <li>second item</li>
+          <li>third item</li>
+            <ul><!--nested unordered list-->
+              <li>sub third item</li>
+              <li>sub third item</li>
+              <li>sub third item</li>
+            </ul>
+        </ul>
+        <h3>ordered list</h3>
+        <ol type = "A"><!--default type is numbers.-->
+          <li>first</li>
+          <li>second</li>
+          <li>third</li>
+        </ol>
+        <h3>description list</h3>
+        <dl>
+          <dt>html</dt>
+          <dd>this adds structure to a webpage.</dd>
+          <dt>css</dt>
+          <dd>this adds style to a webpage.</dd>
+          <dt>javascript</dt>
+          <dd>this adds functionality to a webpage.</dd>
+        </dl>
+        <br>
+        <h4>store hours</h4><!--tables-->
+          <table bgcolor = "black" width = "840"><!--table tag--><!--bgcolor = background color attribute-->
+          <tr bgcolor = "red"><!--table row tag--><!--make sure that the total value of the table width (above) is equal to the total sum of values of the individual widths of the table headers.-->
+            <th width = "120">Monday</th><!--table header tag-->
+            <th width = "120">Tuesday</th>
+            <th width = "120">Wednesday</th>
+            <th width = "120">Thursday</th>
+            <th width = "120">Friday</th>
+            <th width = "120">Saturday</th>
+            <th width = "120">Sunday</th>
+          </tr>
+          <tr align = "center"><!--second row of table--><!--the align center makes sure that the contents of each table data box are centered.-->
+            <td>9AM - 5PM</td><!--table data tag-->
+            <td>9AM - 5PM</td>
+            <td>9AM - 5PM</td>
+            <td>9AM - 5PM</td>
+            <td>9AM - 5PM</td>
+            <td>Closed</td>
+            <td>Closed</td>
+          </tr>
+          </table>
+
+          <h2>Colors in html</h2><!--can also do <body style  = "background-color:rgb(255, 255, 255); as you would in CSS."-->
+            <p style = "color:aqua">colored text</p>
+            <p style = "color:rgb(0, 0, 0)">colored text</p>
+            <p style = "color:#F54927">colored text</p><!--hex color picker (type in hex color picker in your browser's search bar, and a website called, htmlcolorcodes.com should pop up.... just copy and paste the hex color value of your choice from there, and paste it here.-->
+            <p style = "background-color:darkorange; color:darkcyan">colored text and box</p>
+          <p>&copy; A. Grant Hill 2026</p>
       </div>
     </footer>
   </body>
