@@ -188,11 +188,83 @@
                     </script><!--Here is where we can comment out stuff again by way of using these angled brackets.-->
 
             <h1>Form elements</h1>
-              <form><!--like an actual form?-->
-                <label for = "fname">First Name:</label>
-                <input type = "text" id = "fname" name = "fname" placeholder = "Blank">
+              <form action = "submission_page.php" method = "GET"><!--like an actual form?--><!--obviously, this php page isn;t set up, so an error will result when attempting to submit anything for this webpage's form. Also; the GET method attribute is going to append your submitted data to the URL of your webpage (this will yield something like this in the user's URL browser ?fname=&lname=&age=&bday=).-->
+                <label for = "fname">First Name:</label><!--Also, be advised that in terms of appending any submitted data on a form via a webpage, when utilzing GET as the method attribute for the form tag, it is considered to be insecure.... which means that while it's good for non personal information related ntions, it shpu;d never be used in the event more private information is to be collected. For that, instead use POST for the method attribute.-->
+                <input type = "text" id = "fname" name = "fname" placeholder = "Blank" required><!--Actually, the GET method attribute would be ideal for a form placeholder function say when a user needs to utilize it as a search box.... like they wish to find something within your webpage.-->
                 <label for = "lname">Last Name:</label>
-                <input type = "text" id = "lname" name = "lname" placeholder = "Blank">
+                <input type = "text" id = "lname" name = "lname" placeholder = "Blank" required><!--the Required attribute for the input tag is a boolean, and it does exactly what it sounds like; forces the user to fill out the respective placeholder for which it has been assigned to.-->
+                  <!--<br>--><!--commented this out here because it did nothing.... no spacing like it was supposed to.-->
+                <div>
+                  <br>
+                  <label for = "age">Age:</label>
+                  <input type = "text" id = "age" name = "age" placeholder = "Blank">
+                </div>
+                <br>
+                <div><!--use the div tags in this format to breka up the label and input tags, so that they display on the webpage vertcially.-->
+                  <label for = "bday">Birthday:</label>
+                  <input type = "text" id = "bday" name = "bday" placeholder = "Blank">
+                </div>
+                <br>
+                <div>
+                  <label for = "Password">Password:</label>
+                  <input type = "text" id = "Password" name = "Password" Placeholder = "Blank" Required maxlength = "14">
+                </div>
+                <br>
+                <div>
+                  <label for = "email">Email:</label>
+                  <input type = "text" id = "email" name = "email" Placeholder = "Blank" Required>
+                </div>
+                <br>
+                 <div>
+                  <label for = "telephone">Telephone:</label>
+                  <input type = "tel" id = "telephone" name = "telephone" Placeholder = "(000)-000-0000" Required>
+                </div>
+                <br>
+                 <div>
+                  <label for = "tdate">Today's Date:</label>
+                  <input type = "date" id = "tdate" name = "tdate"><!--This date type attribute would have been a better way to code for the birthday input placeholder above. Also, the placeholder attribute is no longer needed here, provided the type attribute is set to date.-->
+                </div>
+                <br>
+                 <div>
+                  <label for = "wishes">How Many Wishes Would You Like Today:</label>
+                  <input type = "number" id = "wishes" name = "wishes" Min = "0" Max = "9" Value = "?"><!--for the value attribute here, I think it expectsd anumber, and in this case, it would act as a placeholder, unless the user changes it. Anything other than a number assigned to the value attribute results in a blank placeholder anyway, but also using a placeholder attribute for an input that uses a number type attribute is futile.-->
+                </div>
+                <br>
+                <div>
+                  <input type = "Reset">
+                </div>
+                <br>
+                <div>
+                  <input type = "Submit"><!--this, on its own, doesn;t necessarily do anything.... because we haven't given it a designated place to submit to. So, we'll need to add attributes to the beginnning form tag that can help to direct another webpage where whatever's been filled out can be submitted to.-->
+                </div>
+                <br>
+                <div>
+                  <label for = "title">Title:</label><!--not sure what the for label does here, since there's no id?-->
+
+                  <label for = "Mr.">Mr.</label><!--when crafting a for attribute for the label tag, ensure that its corresponding input tag has its id attribute matching with it.-->
+                  <input type = "radio" id = "Mr." name = "title" value = "Mr."><!--without the name attribute here in the input tag, the user would be able select all of these options because they aren't classified as being part of the same group.... but when we set each input's name attribute to the same notion, title, in this case.... then they are all now part of the same group, where only one can be selected.-->
+                  <label for = "Ms.">Ms.</label>
+                  <input type = "radio" id = "Ms." name = "title" value = "Ms."><!--the radio input type here refers to sort of button that can be clicked on and marked as a choice.-->
+                  <label for = "Master">Master</label>
+                  <input type = "radio" id = "Master" name = "title" value = "Master"><!--I'm guessing that by asserting the value of each of these inputs as what their respective labels suggest, that when a user selects one, and then hits the suubmit buton, that this value is what would get submitted, since the label itself is just what's displayed on the webpage, not necessarily the data describing what it is.-->
+                  <label for = "Madame">Madame</label>
+                  <input type = "radio" id = "Madame" name = "title" value = "Madame"><!--by doing this extra step of writing in the for and id attributes for each of these tag sets, the user can actually just click on the title listed next to each corresponding radio button to make the same sleection, as if they were to have pressed on the radio button itself.-->
+                </div>
+                <br>
+                <div>
+                  <label for = "Payment">Form of Payment:</label>
+                  <select id = "Payment" name = "Payment"><!--This is a dropdown menu setup. Without giving it any options, it just appears as a blank dropdown box.-->
+                    <option value = "visa">Visa</option>
+                    <option value = "mastercard">Mastercard</option>
+                    <option value = "american express">American Express</option>
+                    <option value = "discover">Discover</option>
+                  </select>
+                </div>
+                <br>
+                <div>
+                  <label for = "subscribe">Subscribe</label>
+                  <input id = "subscribe" type = "checkbox">
+                </div>
               </form>
           <p>&copy; A. Grant Hill 2026</p>
       </div>
