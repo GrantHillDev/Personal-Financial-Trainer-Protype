@@ -9,7 +9,7 @@
 
     <main>
       <section><!--src stands for source attribute.--><!--could actually write the following line of code just as src="./images/PFTLB02.png" without the first avatar part.-->
-        <img id="avatar" src="./images/PFTLB02.png"/><!--when adding cutom made image files into your local directory, make sure they don;t contain any symobls in the name, or else html will not load the image properly.-->
+        <img id="avatar" src="./images/PFTLB02.png"/><!--when adding custom made image files into your local directory, make sure they don't contain any symbols in the name, or else html will not load the image properly.-->
         <center><h1 style = "font-size: 100px;">Personal Finance Trainer Prototype</h1></center><!--centers the header.--><!--makes font much bigger, since h1 is the largest predefined font size.--><!--changed title of project to finance from financial.... sounded like it had too many adjectives.-->
         <hr><!--this is known as a horizontal rule element, and it adds a line that stretches across or webpage. No end tag needed for this tag.-->
         
@@ -20,9 +20,9 @@
           Google<!--this is exactly what the hyperlink will display as on the webpage.-->
           </a>
           <br>
-            <h3>Making another webpage</h3><!--because the page2.html document is loocated inside of the same directory as my main webpage, alall that's nneeded to o lcate it is just its file nname. Otherwise, if it's inside of o anotherddirectory,  you'll have to premept the file name with the name of the directory which it's located in, then followed by a /, then the file name.-->
-            <a href = "page2.html" target = _self title = "This takes you to page 2."><!--make sure that any href string or address contains no spacces, or else it will nt register as a hyperlink on the website.-->
-            Page 2<!--because the href has to both site the addrress of the next page and what itt'sc alledd; itmakes sense to just ennsure that the name of the html document inside ofyour direcotory matches the site address, so as tto not cause unnnecessary errors.-->
+            <h3>Making another webpage</h3><!--because the page2.html document is located inside of the same directory as my main webpage, all that's needed to locate it is just its file name. Otherwise, if it's inside of o another directory,  you'll have to preempt the file name with the name of the directory which it's located in, then followed by a /, then the file name.-->
+            <a href = "page2.html" target = _self title = "This takes you to page 2."><!--make sure that any href string or address contains no spaces, or else it will not register as a hyperlink on the website.-->
+            Page 2<!--because the href has to both site the address of the next page and what it's called; it makes sense to just ensure that the name of the html document inside of your directory matches the site address, so as to not cause unnnecessary errors.-->
             </a>
           <br>
             <h3>Making an email hyperlink</h3>
@@ -50,7 +50,7 @@
       </nav>
       <br>
       <h4>phone call anyone?</h4>
-        <audio controls src = "sounds/CGV01.mp3"></audio><!--audio element; needs controls at minimum.--><!--nevermind, you can write this without the controls boolean attribute.-->
+        <audio controls src = "sounds/CGV01.mp3"></audio><!--audio element; needs controls at minimum.--><!--never mind, you can write this without the controls Boolean attribute.-->
       <h4>we're sorry</h4>
         <audio controls autoplay muted loop src = "sounds/CGV02.mp3"></audio><!--muted audio element that starts playing as soon as the site is loaded and remains on repeat.-->
        sorry, this site doesn't support html music formats.<!--refer back to the tutorial to see how to create back up audio files in case others don't work.-->
@@ -146,12 +146,56 @@
             <p style = "color:rgb(0, 0, 0)">colored text</p>
             <p style = "color:#F54927">colored text</p><!--hex color picker (type in hex color picker in your browser's search bar, and a website called, htmlcolorcodes.com should pop up.... just copy and paste the hex color value of your choice from there, and paste it here.-->
             <p style = "background-color:darkorange; color:darkcyan">colored text and box</p>
+          <br>
+
+          <h1>Span and Div</h1><!--span adds markup to text or portion of a document. Div defines a division of a document.-->
+            <p><span style = "color:gold">I'm writing a sentence.</span> I'm writing another sentence.</p>
+            <p style = "background-color:aquamarine;"><span style = "color:bisque">Here's a sentence.</span> Here's another sentence.</p>
+          <br>
+          <div style = "background-color:blanchedalmond; color:blue">
+              <p>More sentences. Even more sentences.</p>
+              <p>How many more sentences? For real, how many more sentences?</p>
+          </div><!--metadata is literally just data about other data....a set of data that describes and gives information about other data. Though, it does have function, as can be demonstrated below.-->
+
+            <h4>Meta tags</h4><!--meta tags represent what are classified as meta elements, which define various kinds of metadata, which be expressed using the title, base, link, style, and script elements.-->
+             <p>we can add metadata to the head of our html document and this will tell the web browser what our webpage is about. Meta tags are placed within the head of the html document, not the body. Meta tags don't require closing tags.</p>
+             <p>Meta tags can take on name attributes, among others, but to start, as an example; meta name = "description" content = "a web application that provides financial insight." </p>
+             <p>Here's another example; meta name = "keywords" content = "finance, insight, education"</p>
+             <p>Could even use meta tags for something like this; meta name = "author" content = "Grant Hill"</p>
+             <p>In the event that a user is utilizing a web browser to access your web page via their own mobile device, to ensure that your webpage displays proportionately on their mobile device's screen, you could implement a meta tag which ensures that; meta name = "viewport" content = "width=device-width, initial-scale = 1.0"</p>
+             <P>we can even use meta tags to tell a web browser what sort of character encoding we're using. Although the standard doesn't necessarily require a specific encoding format, UTF-8 (also known as Unicode) is often encouraged for use by web developers (in part for security reasons). meta name = "UTF-8"</P>
+             <p>Meta can be used to instruct our webpage to refresh within a certain amount of time. meta http-equiv = "refresh" content = "30" (content, in this context, represents the number of seconds to delay before the site refreshes itself automatically) </p>
+
+            <h3>iframes</h3><!--an iframe is embed content from another source into an html document. A couple examples would entail advertisements, or presumably what's used in many hacking techniques. You could embed your current webpage with another webpage, or embed your current html document with another html document.-->
+              <p>most major websites have disabled the use of iframes, so the following instance would result in an error along the lines of, 'www.google.com refused to connect.'; iframe src = "https://google.com"</p>
+              <p>The reason why ifrmaes can be abused by hackers and can consequently pose such a danger is because they can change the size of their embed website to reflect the same size as yours; thus posing as your website. This is especially catastrophic in the event of otherwise trusted websites that require or ask for your personal information, say a bank, or other financial institution.... and and so if you as a user go to that trusted site addresss, and enter into it your personal information; unknowingly doing this for a potential embed site that's posing as the site you thought you were going to, that embed site can still capture your personal information.</p>
+              <p>There are still some major websites that do accept the use of iframes, such as bing.com. iframe src = "https://bing.com" and this will feature a small window of the bing website popping up on your webpage. To change its window size when does pop up on your webpage, you could write something like this; iframe src = "https://bing.com" width = "700" height = "400" and then that same iframe of bing.com would become much larger on your webpage.</p>
+              <iframe src = "Advertisement.html"></iframe>
+              <!--<iframe style = "border:0" src = "Advertisement.html" width = 800 height = 600>--><!--had to copmment this line of code out because it blocked out anything else written in benenath it.-->
+
+            <h2>Buttons</h2>
+                <a href = "https://www.google.com"><!--Here, we've now turned the button below into a hyperlink, that takes users to google.com.-->
+                  <button style = "background-color: blue; color:chartreuse">Click Me</button><!--Still functions just like a clickable button even though it doesn't yet do anything.-->
+                </a>
+              <br>
+                <button onclick = "doSomething()">Change the Text Below</button>
+                  <p id = "test">Hello!</p>
+                    <script>/*Hey, so check this out -- we are now officially in javascript territory! Which also means that we have to use a different format of commenting out stuff, as we would should we be writing in javascript.... hence these astrixes and slashes.*/
+                      function doSomething()/*Defining the method/function we're calling above in our html script.*/
+                      {
+                        document.getElementById("test").innerHTML = "Goodbye!";
+                      }
+                    </script><!--Here is where we can comment out stuff again by way of using these angled brackets.-->
+
+            <h1>Form elements</h1>
+              <form><!--like an actual form?-->
+                <label for = "fname">First Name:</label>
+                <input type = "text" id = "fname" name = "fname" placeholder = "Blank">
+                <label for = "lname">Last Name:</label>
+                <input type = "text" id = "lname" name = "lname" placeholder = "Blank">
+              </form>
           <p>&copy; A. Grant Hill 2026</p>
       </div>
     </footer>
   </body>
 </html>
-
- 
-
-
